@@ -1,0 +1,38 @@
+This project was developed for the Fall of 2014 Mobile Web Graphics class by Ben Lipson and Mitch Kosieramiearksaeri.
+
+It's a music visualization application written in javascript using html and css. It uses soundJS for music analysing 
+and webGL and 2D canvases for the visualizations. The usage is as follows:
+
+-It must be run from a web server otherwise the soundJS and webGL stuff won't work.
+-index.html is the homepage, just navigate to it in a browser to start the app.
+
+
+The structure is as follows:
+
+
+index.html stores the choice of song in the browsers local storage, then redirects to musicVis.html. musicVis gets 
+the song name from the local storage, and starts the init function.
+
+init():
+	-creates the myApp object to hold all of the soundJS stuff
+	-sets up the event handler to start the process
+myApp object:
+	-prototype:
+		-holds all of the state variables for soundJS and DOM element event handling
+		-init():
+			-sets up soundJS
+			-sets up context using javascript's built in web audio plug-in
+			-creates the analyser node
+			-gets the song name and calls the playSound() funciton
+		-playSound():
+			-connects the analyser node to the audio context
+			-gets the frequency, waveform, and decibel data into three different arrays
+			-plays the sound
+			-handles all click/touch events for all of the DOM elements (like the media player)
+canvas2D:
+	-Next is all the code for the 2D visualizations. It sets up the initial visualizations, as well as the tick2D 
+	function.
+
+webGL:
+	-All the webGL code for the boxes visualization. Includes initGL(), initShaders(), initBuffers(), tick(), 
+	animate(), and draw().

@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Visualizing Music</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    
+    <!-- CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/index-sidebar.css" rel="stylesheet" type="text/css">      
+    <link rel="stylesheet" type="text/css" href="css/demoStyles.css" />
+    <link href="css/simple-slider.css" rel="stylesheet" type="text/css" />
+    <link href="css/simple-slider-volume.css" rel="stylesheet" type="text/css" />  
+
+    <!-- My CSS -->
+    <link href='musicVis.css' rel='stylesheet' type='text/css'>
+
+    <!-- JQuery Core Javascript -->
+    <script src="src/jquery/jquery-1.11.0.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="src/bootstrapjs/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      function passSong(id) {
+        console.log("HAOIWEJFOAIEF");
+        sessionStorage.setItem("song", document.getElementById(id).innerHTML);
+        console.log(sessionStorage.getItem("song"));
+      }
+    </script>
+
+    
+
+  </head>
+  <body>
+    <h1 style="text-align:center;">Music Visualization</h1>
+    <h2 style="text-align:center;">Ben Lipson and Mitch Kosiearadzki</h2>
+    <div id="songList" style="background:#555555; color:white; width: 50%; margin: auto; height: 50%; position:relative; top:10%; border-radius:25px; text-align:center;">
+      <ul class="sidebar-nav" style="width:50%; margin: auto;">
+	<li style="list-style-type:none;">
+          <a id="song1" onclick="passSong(this.id);" href="musicVis.html" style="color:white";>Harder Better Faster Stronger.mp3</a>
+        </li>
+	<li style="list-style-type:none;">
+          <a id="song2" onclick="passSong(this.id);" href="musicVis.html" style="color:white";>Kokiriko Bushi.mp3</a>
+        </li>
+	<li style="list-style-type:none;">
+          <a id="song3" onclick="passSong(this.id);" href="musicVis.html" style="color:white";>In One Ear.mp3</a>
+        </li>
+	<li style="list-style-type:none;">
+          <a id="song4" onclick="passSong(this.id);" href="musicVis.html" style="color:white";>Sweet Georgia Brown.m4a</a>
+        </li>
+	<li style="list-style-type:none;">
+          <a id="song5" onclick="passSong(this.id);" href="musicVis.html" style="color:white";>Don't Worry Be Happy.m4a</a>
+        </li>
+	<li style="list-style-type:none;">
+	  <a id="song6" onclick="passSong(this.id);" href="musicVis.html" style="color:white";>Que Onda Guero.mp3</a>
+	</li>
+	<li style="list-style-type:none;">
+	  <a id="song7" onclick="passSong(this.id);" href="musicVis.html" style="color:white";>Moanin.mp3</a>
+	</li>
+      </ul>
+    </div>
+  </body>
+</html>
